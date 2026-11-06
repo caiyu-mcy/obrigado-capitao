@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Obrigado, Capitão — 克里斯蒂亚诺·罗纳尔多 葡萄牙国家队纪念</title>
+<meta name="description" content="2003—2026，234 场，146 球。一个时代在 2026 年 11 月 5 日结束。">
+<style>
+:root{
+  --red:#C8102E;
+  --red-2:#8E0A1E;
+  --red-3:#5A0410;
+  --green:#046A38;
+  --green-2:#03341C;
+  --gold:#E0B872;
+  --gold-2:#9C7A34;
+  --cream:#F5EFE3;
+  --cream-dim:rgba(245,239,227,.62);
+  --bg:#0A0706;
+  --serif:"Songti SC","Noto Serif SC","Source Han Serif SC",Georgia,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue","Microsoft YaHei",Arial,sans-serif;
+  --num:"DIN Alternate","Bebas Neue","Oswald","Helvetica Neue",Arial,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--cream);
+  font-family:var(--sans);
+  line-height:1.7;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{display:block;max-width:100%}
+::selection{background:var(--gold);color:#16090a}
+
+/* ---------- grain ---------- */
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode:overlay;
+}
+
+/* ---------- progress ---------- */
+#prog{
+  position:fixed;top:0;left:0;height:2px;width:0;z-index:9999;
+  background:linear-gradient(90deg,var(--red),var(--gold));
+  box-shadow:0 0 12px rgba(224,184,114,.5);
+  transition:width .1s linear;
+}
+/* ---------- nav dots ---------- */
+#dots{
+  position:fixed;right:26px;top:50%;transform:translateY(-50%);z-index:900;
+  display:flex;flex-direction:column;gap:14px;
+}
+#dots a{
+  width:6px;height:6px;border-radius:50%;background:rgba(245,239,227,.22);
+  transition:.4s var(--ease);display:block;
+}
+#dots a.on{background:var(--gold);box-shadow:0 0 0 4px rgba(224,184,114,.14);height:18px;border-radius:3px}
+@media(max-width:900px){#dots{display:none}}
+
+/* ---------- shared ---------- */
+section{position:relative;padding:clamp(80px,12vh,140px) clamp(20px,6vw,80px)}
+.wrap{max-width:1180px;margin:0 auto;width:100%}
+.kicker{
+  font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);
+  display:flex;align-items:center;gap:14px;margin-bottom:26px;font-weight:500;
+}
+.kicker::before{content:"";width:34px;height:1px;background:var(--gold);opacity:.7}
+h2{
+  font-family:var(--serif);font-weight:600;
+  font-size:clamp(28px,4.6vw,54px);line-height:1.22;letter-spacing:.01em;
+  text-wrap:balance;
+}
+.sub{color:var(--cream-dim);font-size:clamp(13px,1.5vw,15px);margin-top:16px;max-width:52ch;text-wrap:pretty}
+.hl{color:var(--gold)}
+.hl-g{color:#6FBF95}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
+.rv.d4{transition-delay:.4s}.rv.d5{transition-delay:.5s}
+
+/* ============ 0 HERO ============ */
+#s0{
+  min-height:100svh;min-height:100dvh;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;text-align:center;
+  padding:96px 24px 128px;overflow:hidden;
+  background:
+    radial-gradient(120% 90% at 50% 8%,#8E0A1E 0%,#4A040E 38%,#0A0706 76%);
+}
+#s0::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(70% 50% at 50% 100%,rgba(200,16,46,.42),transparent 70%);
+  pointer-events:none;
+}
+.hero-seven{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  font-family:var(--num);font-size:min(72vh,52vw);line-height:.8;font-weight:700;
+  color:transparent;-webkit-text-stroke:1px rgba(245,239,227,.14);
+  letter-spacing:-.04em;user-select:none;pointer-events:none;
+}
+.hero-inner{position:relative;z-index:2;max-width:900px}
+.hero-top{
+  font-size:clamp(9px,1.2vw,11px);letter-spacing:.5em;color:rgba(245,239,227,.55);
+  text-transform:uppercase;margin-bottom:clamp(20px,3vh,34px);
+}
+.hero-name{
+  font-family:var(--num);font-weight:700;letter-spacing:.16em;
+  font-size:clamp(14px,2.2vw,20px);color:var(--gold);margin-bottom:clamp(14px,2vh,22px);
+}
+.hero-title{
+  font-family:var(--serif);font-weight:600;
+  font-size:clamp(46px,11vw,132px);line-height:.98;letter-spacing:-.01em;
+}
+.hero-title em{
+  display:block;font-style:italic;color:var(--gold);
+  text-shadow:0 0 60px rgba(224,184,114,.28);
+}
+.hero-rule{
+  width:1px;height:clamp(38px,7vh,64px);margin:clamp(22px,3.4vh,34px) auto;
+  background:linear-gradient(var(--gold),transparent);
+}
+.hero-meta{
+  display:flex;gap:clamp(18px,4vw,54px);justify-content:center;flex-wrap:wrap;
+  font-family:var(--num);font-size:clamp(11px,1.5vw,13px);letter-spacing:.18em;
+  color:rgba(245,239,227,.7);
+}
+.hero-meta b{color:var(--cream);font-weight:400}
+.hero-quote{
+  margin-top:clamp(20px,3.2vh,38px);font-family:var(--serif);
+  font-size:clamp(13px,1.7vw,17px);color:rgba(245,239,227,.72);
+  line-height:2;max-width:min(30em,92vw);margin-left:auto;margin-right:auto;
+}
+.hero-quote p{max-width:100%}
+.hero-quote p + p{margin-top:10px}
+.hero-quote span{display:block;font-size:.82em;letter-spacing:.14em;color:rgba(224,184,114,.85);margin-top:10px;font-family:var(--sans)}
+.scroll-hint{
+  position:absolute;bottom:clamp(22px,4vh,40px);left:50%;transform:translateX(-50%);
+  font-size:10px;letter-spacing:.34em;color:rgba(245,239,227,.42);
+  display:flex;flex-direction:column;align-items:center;gap:10px;z-index:3;
+}
+.scroll-hint i{display:block;width:1px;height:34px;background:linear-gradient(rgba(245,239,227,.5),transparent);animation:drop 2s infinite var(--ease)}
+@keyframes drop{0%{transform:scaleY(.2);transform-origin:top;opacity:0}40%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);transform-origin:bottom;opacity:0}}
+
+/* ============ 1 NUMBERS ============ */
+#s1{background:linear-gradient(180deg,#0A0706,#120809 60%,#0A0706)}
+.stats{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:1px;margin-top:clamp(40px,6vh,64px);
+  background:rgba(245,239,227,.1);border:1px solid rgba(245,239,227,.1);
+}
+.stat{
+  background:#0C0808;padding:clamp(20px,3.2vw,38px) clamp(12px,2vw,22px);
+  transition:background .5s var(--ease);
+}
+.stat:hover{background:#150B0D}
+.stat .n{
+  font-family:var(--num);font-weight:700;line-height:1;
+  font-size:clamp(30px,5.4vw,58px);letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums;color:var(--cream);
+}
+.stat .n small{font-size:.42em;color:var(--gold);margin-left:3px;letter-spacing:0}
+.stat .l{margin-top:12px;font-size:clamp(10px,1.3vw,12px);letter-spacing:.16em;color:var(--cream-dim)}
+.stat.hero-stat .n{color:var(--gold)}
+.stats-4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:820px){
+  .stats{grid-template-columns:repeat(3,1fr)}
+  .stats-4{grid-template-columns:repeat(2,1fr)}
+  .stat{padding:20px 12px}
+}
+@media(max-width:460px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+}
+
+/* ============ 2 TIMELINE ============ */
+#s2{background:#080506}
+.tl{position:relative;margin-top:clamp(44px,7vh,72px);padding-left:0}
+.tl::before,.tl::after{
+  content:"";position:absolute;top:0;left:50%;width:1px;transform:translateX(-.5px);
+  pointer-events:none;
+}
+.tl::before{height:100%;background:rgba(245,239,227,.13)}
+.tl::after{
+  height:var(--tlp,0%);
+  background:linear-gradient(180deg,var(--gold),var(--red) 55%,var(--green));
+  transition:height .18s linear;
+}
+.ev{
+  position:relative;display:grid;grid-template-columns:1fr 84px 1fr;gap:0;
+  margin-bottom:clamp(26px,4.6vh,46px);
+}
+.ev:last-child{margin-bottom:0}
+.ev-node{
+  grid-column:2;position:relative;display:flex;justify-content:center;padding-top:6px;
+}
+.ev-node i{
+  width:9px;height:9px;border-radius:50%;background:#0A0706;
+  border:1px solid rgba(245,239,227,.34);position:relative;z-index:2;
+  transition:.6s var(--ease);
+}
+.ev.in .ev-node i{background:var(--gold);border-color:var(--gold);box-shadow:0 0 0 5px rgba(224,184,114,.12)}
+.ev[data-tone="sad"].in .ev-node i{background:var(--green);border-color:#6FBF95;box-shadow:0 0 0 5px rgba(111,191,149,.14)}
+.ev-card{
+  grid-column:1;text-align:right;padding-right:clamp(16px,3vw,40px);
+  opacity:0;transform:translateX(-22px);transition:.9s var(--ease);
+}
+.ev:nth-child(even) .ev-card{grid-column:3;text-align:left;padding-right:0;padding-left:clamp(16px,3vw,40px);transform:translateX(22px)}
+.ev.in .ev-card{opacity:1;transform:none}
+.ev-date{
+  font-family:var(--num);font-size:12px;letter-spacing:.2em;color:var(--gold);
+  margin-bottom:8px;font-variant-numeric:tabular-nums;
+}
+.ev[data-tone="sad"] .ev-date{color:#6FBF95}
+.ev-title{font-family:var(--serif);font-size:clamp(16px,2.2vw,23px);font-weight:600;line-height:1.4}
+.ev-desc{font-size:clamp(12px,1.5vw,13.5px);color:var(--cream-dim);margin-top:8px;line-height:1.85;text-wrap:pretty}
+.ev-tag{
+  display:inline-block;margin-top:10px;font-size:10px;letter-spacing:.18em;
+  padding:3px 9px;border:1px solid rgba(224,184,114,.34);color:var(--gold);border-radius:2px;
+}
+@media(max-width:760px){
+  .ev{grid-template-columns:26px 1fr;gap:0}
+  .tl::before,.tl::after{left:4px}
+  .ev-node{grid-column:1;justify-content:flex-start;padding-left:0}
+  .ev:nth-child(odd) .ev-card,.ev:nth-child(even) .ev-card{
+    grid-column:2;text-align:left;padding:0 0 0 16px;transform:translateX(18px);
+  }
+  .ev.in .ev-card{transform:none}
+}
+
+/* ============ 3 MOMENTS ============ */
+#s3{background:linear-gradient(180deg,#080506,#0D0507)}
+.moments{margin-top:clamp(40px,6vh,64px);display:flex;flex-direction:column;gap:clamp(18px,3vh,28px)}
+.mo{
+  position:relative;border:1px solid rgba(245,239,227,.1);overflow:hidden;
+  padding:clamp(22px,4vw,44px);display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(18px,4vw,50px);
+  align-items:center;background:linear-gradient(115deg,rgba(200,16,46,.1),rgba(10,7,6,.4) 55%);
+}
+.mo:nth-child(even){grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);background:linear-gradient(115deg,rgba(4,106,56,.1),rgba(10,7,6,.4) 55%)}
+.mo:nth-child(even) .mo-info{order:2}
+.mo-year{
+  font-family:var(--num);font-size:clamp(52px,9vw,104px);line-height:.82;font-weight:700;
+  color:transparent;-webkit-text-stroke:1px rgba(224,184,114,.4);letter-spacing:-.02em;
+}
+.mo:nth-child(even) .mo-year{-webkit-text-stroke-color:rgba(111,191,149,.4)}
+.mo h3{font-family:var(--serif);font-size:clamp(19px,3vw,30px);margin-top:14px;line-height:1.35;font-weight:600}
+.mo p{font-size:clamp(12.5px,1.6vw,14px);color:var(--cream-dim);margin-top:14px;line-height:1.9;max-width:40ch}
+.mo-score{
+  display:inline-flex;align-items:baseline;gap:10px;margin-top:18px;
+  font-family:var(--num);letter-spacing:.1em;color:var(--gold);font-size:clamp(13px,1.8vw,16px);
+}
+.mo-score b{font-size:1.5em;font-weight:700}
+.mo-art{position:relative;min-height:200px;display:flex;align-items:center;justify-content:center}
+@media(max-width:820px){
+  .mo,.mo:nth-child(even){grid-template-columns:1fr}
+  .mo:nth-child(even) .mo-info{order:0}
+  .mo-art{min-height:170px;order:-1}
+}
+
+/* ball path anim */
+.pitch{width:100%;max-width:440px;height:auto}
+.arc{stroke-dasharray:520;stroke-dashoffset:520}
+.mo.in .arc{animation:draw 2.2s var(--ease) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.kickball{offset-distance:0%;opacity:0}
+.mo.in .kickball{animation:fly 2.4s cubic-bezier(.35,.05,.6,.95) .25s forwards}
+@keyframes fly{
+  0%{offset-distance:0%;opacity:0;transform:scale(.6)}
+  8%{opacity:1;transform:scale(1)}
+  96%{offset-distance:100%;opacity:1;transform:scale(.75)}
+  100%{offset-distance:100%;opacity:0;transform:scale(.4)}
+}
+.netglow{opacity:0}
+.mo.in .netglow{animation:flash 1.4s ease 2.1s forwards}
+@keyframes flash{0%{opacity:0}30%{opacity:.85}100%{opacity:.28}}
+
+/* header card */
+.head-card{display:flex;align-items:center;gap:clamp(14px,3vw,28px);flex-wrap:wrap}
+.big7{
+  font-family:var(--num);font-weight:700;font-size:clamp(66px,12vw,120px);line-height:.8;
+  color:var(--red);text-shadow:0 0 70px rgba(200,16,46,.55);
+}
+.head-card .txt{font-family:var(--serif);font-size:clamp(15px,2vw,20px);line-height:1.65;color:rgba(245,239,227,.86)}
+
+/* ============ 4 HONOURS ============ */
+#s4{background:#080506}
+.hon-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:clamp(34px,5vh,54px)}
+.hon{
+  border:1px solid rgba(245,239,227,.1);padding:clamp(18px,3vw,30px);
+  position:relative;overflow:hidden;background:rgba(255,255,255,.012);
+  transition:.5s var(--ease);
+}
+.hon:hover{border-color:rgba(224,184,114,.4);transform:translateY(-3px)}
+.hon .cup{
+  width:34px;height:34px;margin-bottom:16px;color:var(--gold);
+}
+.hon h4{font-family:var(--serif);font-size:clamp(15px,2vw,19px);font-weight:600;line-height:1.5}
+.hon .yr{font-family:var(--num);font-size:clamp(22px,3.4vw,34px);color:var(--gold);line-height:1;margin-bottom:10px;letter-spacing:.02em}
+.hon .note{font-size:11.5px;color:var(--cream-dim);margin-top:10px;line-height:1.75}
+.hon.second .yr{color:#8FA89A}
+.hon.second{border-color:rgba(111,191,149,.16)}
+@media(max-width:820px){.hon-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){
+  .hon-grid{grid-template-columns:1fr;gap:10px}
+  .hon{padding:16px 18px}
+  .hon .cup{width:25px;height:25px;margin-bottom:9px}
+  .hon .yr{font-size:24px}
+}
+
+/* chart */
+.chart{margin-top:clamp(44px,7vh,70px)}
+.chart-title{font-size:11px;letter-spacing:.26em;color:var(--gold);margin-bottom:24px;text-transform:uppercase}
+.bars{display:flex;flex-direction:column;gap:14px}
+.bar-row{display:grid;grid-template-columns:clamp(88px,13vw,130px) 1fr 52px;align-items:center;gap:14px}
+.bar-l{font-size:clamp(11px,1.4vw,13px);color:var(--cream-dim);text-align:right;letter-spacing:.04em}
+.bar-track{height:8px;background:rgba(245,239,227,.07);position:relative;overflow:hidden}
+.bar-fill{position:absolute;inset:0 auto 0 0;width:0;background:linear-gradient(90deg,var(--red),var(--gold));transition:width 1.4s var(--ease)}
+.bar-row:nth-child(2) .bar-fill{background:linear-gradient(90deg,#A30D24,#E0B872)}
+.bar-v{font-family:var(--num);font-size:clamp(13px,1.8vw,17px);color:var(--cream);text-align:right;font-variant-numeric:tabular-nums}
+.chart-foot{margin-top:18px;font-size:11.5px;color:rgba(245,239,227,.4);letter-spacing:.04em}
+
+/* tournament grids */
+.tgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:clamp(36px,5vh,54px)}
+.tcell{
+  border-top:1px solid rgba(245,239,227,.14);padding-top:14px;position:relative;
+  transition:.5s var(--ease);
+}
+.tcell:hover{border-top-color:var(--gold)}
+.tcell .y{font-family:var(--num);font-size:clamp(14px,2vw,18px);color:var(--cream);letter-spacing:.04em}
+.tcell .g{font-family:var(--num);font-size:clamp(20px,3vw,28px);color:var(--gold);line-height:1.1;margin-top:6px}
+.tcell .g small{font-size:.44em;color:var(--cream-dim);letter-spacing:.1em;margin-left:3px}
+.tcell .r{font-size:10.5px;color:var(--cream-dim);margin-top:4px;letter-spacing:.06em}
+.tcell.champ .r{color:var(--gold)}
+@media(max-width:820px){.tgrid{grid-template-columns:repeat(3,1fr);gap:16px 10px}}
+@media(max-width:420px){.tgrid{grid-template-columns:repeat(2,1fr)}}
+.tlabel{font-size:11px;letter-spacing:.26em;color:var(--gold);margin-top:clamp(34px,5vh,50px);text-transform:uppercase}
+
+/* ============ 5 DANMAKU ============ */
+#s5{
+  padding:clamp(80px,12vh,120px) 0;overflow:hidden;
+  background:radial-gradient(100% 80% at 50% 50%,#1A0409,#0A0706 70%);
+}
+#s5 .wrap{padding:0 clamp(20px,6vw,80px)}
+.dm-stage{
+  position:relative;height:clamp(340px,52vh,520px);margin-top:clamp(24px,4vh,40px);
+  overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+}
+.dm-lane{position:absolute;left:0;right:0;height:34px;will-change:transform}
+.dm{
+  position:absolute;left:100%;white-space:nowrap;font-size:clamp(13px,1.7vw,16px);
+  color:rgba(245,239,227,.9);letter-spacing:.02em;
+  padding:0 26px;line-height:34px;
+}
+.dm.pt{color:rgba(224,184,114,.95);font-style:italic;font-family:var(--serif)}
+.dm.en{color:rgba(160,200,180,.92);font-family:var(--num);letter-spacing:.06em}
+.dm.hot{color:#fff;text-shadow:0 0 18px rgba(224,184,114,.55)}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(calc(-100% - 100vw))}}
+.dm-ctrl{display:flex;gap:10px;margin-top:26px;flex-wrap:wrap;align-items:center}
+.dm-btn{
+  background:transparent;border:1px solid rgba(245,239,227,.22);color:rgba(245,239,227,.8);
+  font-family:var(--sans);font-size:12px;letter-spacing:.12em;padding:8px 18px;cursor:pointer;
+  transition:.35s var(--ease);border-radius:2px;
+}
+.dm-btn:hover{border-color:var(--gold);color:var(--gold)}
+.dm-btn.act{background:var(--gold);color:#16090a;border-color:var(--gold)}
+.dm-src{margin-left:auto;font-size:11px;color:rgba(245,239,227,.38);letter-spacing:.05em}
+@media(max-width:700px){.dm-src{width:100%;margin-left:0;margin-top:6px}}
+
+/* ============ 6 END ============ */
+#s6{
+  min-height:100svh;min-height:100dvh;display:flex;flex-direction:column;justify-content:center;
+  background:radial-gradient(90% 80% at 50% 40%,#5A0410,#0A0706 72%);
+  overflow:hidden;
+}
+.jersey-box{
+  position:relative;perspective:1600px;margin:clamp(24px,4.4vh,42px) auto 0;
+  width:clamp(220px,29vw,292px);
+}
+.jersey-box::before{
+  content:"";position:absolute;inset:-14% -22%;z-index:0;
+  background:radial-gradient(50% 50% at 50% 46%,rgba(200,16,46,.34),transparent 72%);
+  filter:blur(16px);pointer-events:none;
+}
+.jersey{
+  position:relative;z-index:1;width:100%;aspect-ratio:100/104;transform-style:preserve-3d;
+  transition:transform 1.15s cubic-bezier(.6,.02,.25,1);cursor:pointer;
+}
+.jersey.flip{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;filter:drop-shadow(0 20px 38px rgba(0,0,0,.55))}
+.face.back{transform:rotateY(180deg)}
+.shirt{
+  position:absolute;inset:0;
+  clip-path:polygon(36% 0%,20% 3%,3% 20%,3% 34%,14% 43%,22% 37%,22% 98%,50% 99%,78% 98%,78% 37%,86% 43%,97% 34%,97% 20%,80% 3%,64% 0%,50% 10%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+}
+.shirt.red{background:linear-gradient(155deg,#E21A38 0%,#BE1029 32%,#960B21 66%,#760819 100%)}
+.shirt.green{background:linear-gradient(155deg,#0E7C48 0%,#05653C 38%,#06402A 100%)}
+.shirt::before{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:repeating-linear-gradient(96deg,rgba(255,255,255,.055) 0 1px,transparent 1px 5px);
+  mix-blend-mode:overlay;
+}
+.shirt::after{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(58% 34% at 50% 6%,rgba(255,255,255,.18),transparent 64%),
+             radial-gradient(72% 58% at 50% 110%,rgba(0,0,0,.34),transparent 64%);
+}
+.collar{
+  position:absolute;top:-1%;left:50%;transform:translateX(-50%);
+  width:21%;height:10.5%;border-radius:0 0 46% 46%;
+  background:linear-gradient(#2A0207,#4A040E);
+  border:1px solid rgba(224,184,114,.5);border-top:none;z-index:3;
+}
+.shirt.green .collar{background:linear-gradient(#021A0E,#03301B)}
+.seams{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+.crest{position:absolute;top:17%;left:23%;width:12.5%;z-index:3;opacity:.92}
+.jnum{
+  position:relative;z-index:3;font-family:var(--num);font-weight:700;
+  font-size:clamp(84px,12.5vw,116px);line-height:.82;color:#F8F3E8;
+  text-shadow:0 5px 22px rgba(0,0,0,.4);letter-spacing:-.02em;
+}
+.jnum.sm{font-size:clamp(60px,8.6vw,86px)}
+.jnm{
+  position:relative;z-index:3;margin-top:11px;font-family:var(--num);
+  font-size:clamp(10px,1.4vw,12.5px);letter-spacing:.34em;
+  color:rgba(248,243,232,.9);
+}
+.jnm.sub2{font-size:9px;letter-spacing:.2em;margin-top:5px;color:rgba(248,243,232,.6)}
+.jcapt{
+  position:relative;z-index:3;font-family:var(--serif);font-style:italic;
+  font-size:clamp(13px,1.9vw,17px);color:var(--gold);margin-bottom:8px;letter-spacing:.08em;
+}
+.jhint{
+  position:absolute;bottom:15%;left:0;right:0;z-index:4;text-align:center;
+  font-size:8.5px;letter-spacing:.16em;color:rgba(255,255,255,.78);
+}
+.end-title{
+  font-family:var(--serif);font-size:clamp(38px,8.4vw,96px);text-align:center;
+  line-height:1.02;margin-top:clamp(28px,5vh,44px);font-weight:600;
+}
+.end-title em{display:block;font-style:italic;color:var(--gold)}
+.end-sub{text-align:center;color:var(--cream-dim);font-size:clamp(12px,1.6vw,14px);margin-top:20px;line-height:2;letter-spacing:.04em}
+.end-actions{display:flex;gap:12px;justify-content:center;margin-top:clamp(30px,5vh,44px);flex-wrap:wrap}
+.btn-primary{
+  background:var(--gold);color:#16090a;border:none;padding:13px 32px;
+  font-family:var(--sans);font-size:13px;letter-spacing:.18em;cursor:pointer;border-radius:2px;
+  transition:.35s var(--ease);font-weight:600;
+}
+.btn-primary:hover{background:#F0CB8C;transform:translateY(-2px);box-shadow:0 10px 30px rgba(224,184,114,.22)}
+.btn-ghost{
+  background:transparent;border:1px solid rgba(245,239,227,.24);color:rgba(245,239,227,.82);
+  padding:13px 32px;font-family:var(--sans);font-size:13px;letter-spacing:.18em;
+  cursor:pointer;border-radius:2px;transition:.35s var(--ease);
+}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+footer{
+  text-align:center;padding:36px 24px calc(36px + env(safe-area-inset-bottom));
+  font-size:10.5px;color:rgba(245,239,227,.3);letter-spacing:.1em;line-height:2;
+  border-top:1px solid rgba(245,239,227,.07);background:#080506;
+}
+footer a{color:rgba(224,184,114,.6);text-decoration:none}
+
+/* toast */
+#toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);z-index:9999;
+  background:rgba(224,184,114,.96);color:#16090a;padding:11px 26px;border-radius:2px;
+  font-size:12.5px;letter-spacing:.1em;opacity:0;pointer-events:none;transition:.45s var(--ease);
+}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  .rv{opacity:1;transform:none}
+  .ev-card{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div id="prog"></div>
+<nav id="dots" aria-label="章节导航">
+  <a href="#s0" aria-label="开场"></a>
+  <a href="#s1" aria-label="数字"></a>
+  <a href="#s2" aria-label="时间轴"></a>
+  <a href="#s3" aria-label="时刻"></a>
+  <a href="#s4" aria-label="荣誉"></a>
+  <a href="#s5" aria-label="球迷"></a>
+  <a href="#s6" aria-label="告别"></a>
+</nav>
+
+<!-- ================= 0 ================= -->
+<section id="s0">
+  <div class="hero-seven" aria-hidden="true">7</div>
+  <div class="hero-inner">
+    <div class="hero-top">Portugal · 2003 — 2026</div>
+    <div class="hero-name">CRISTIANO RONALDO</div>
+    <h1 class="hero-title">Obrigado,<em>Capitão</em></h1>
+    <div class="hero-rule"></div>
+    <div class="hero-meta">
+      <span><b>234</b> 场</span>
+      <span><b>146</b> 球</span>
+      <span><b>45</b> 助攻</span>
+      <span><b>23</b> 年</span>
+    </div>
+    <div class="hero-quote">
+      <p>“是时候交还国家队 7 号球衣了。”</p>
+      <p>“进球会褪色，奖杯会进博物馆，纪录终会被打破。<br>但有些东西时间永远抹不掉——我们在人们心里的位置。”</p>
+      <span>2026.11.05</span>
+    </div>
+  </div>
+  <div class="scroll-hint"><span>SCROLL</span><i></i></div>
+</section>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="wrap">
+    <div class="kicker rv">The Numbers</div>
+    <h2 class="rv d1">二十三年，一个数字<br>叠出来的重量</h2>
+    <p class="sub rv d2">全部为男子足球国家队世界纪录。数字是冷的，但每一个数字背后都是一次跑动。</p>
+    <div class="stats rv d3">
+      <div class="stat hero-stat"><div class="n" data-to="234">0</div><div class="l">出场 · 世界纪录</div></div>
+      <div class="stat hero-stat"><div class="n" data-to="146">0</div><div class="l">进球 · 世界纪录</div></div>
+      <div class="stat"><div class="n" data-to="45">0</div><div class="l">助攻</div></div>
+      <div class="stat"><div class="n" data-to="18604" data-comma="1">0</div><div class="l">出场分钟</div></div>
+      <div class="stat"><div class="n" data-to="0.62" data-dec="2">0</div><div class="l">场均进球</div></div>
+      <div class="stat"><div class="n" data-to="10">0</div><div class="l">国家队帽子戏法</div></div>
+    </div>
+    <div class="stats stats-4 rv d4">
+      <div class="stat"><div class="n" data-to="49">0</div><div class="l">攻破的不同国家队</div></div>
+      <div class="stat"><div class="n" data-to="22">0</div><div class="l">点球破门</div></div>
+      <div class="stat"><div class="n" data-to="6">0</div><div class="l">六届世界杯均破门</div></div>
+      <div class="stat"><div class="n" data-to="23">0</div><div class="l">连续进球年份</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="wrap">
+    <div class="kicker rv">The Journey</div>
+    <h2 class="rv d1">从菲戈身后的少年<br>到整支球队的脊梁</h2>
+    <p class="sub rv d2">金色是登顶，绿色是遗憾。两条线都属于他。</p>
+
+    <div class="tl" id="tl">
+
+      <div class="ev rv" data-tone="gold">
+        <div class="ev-node"><i></i></div>
+        <div class="ev-card">
+          <div class="ev-date">2003.08.20</div>
+          <div class="ev-title">18 岁 6 个月，替补菲戈登场</div>
+          <div class="ev-desc">友谊赛 1-0 哈萨克斯坦。没人知道这个从马德拉来的孩子，会在同一件球衣上待 23 年。</div>
+          <span class="ev-tag">国家队首秀</span>
+        </div>
+      </div>
+
+      <div class="ev rv" data-tone="sad">
+        <div class="ev-node"><i></i></div>
+        <div class="ev-card">
+          <div class="ev-date">2004.07.04</div>
+          <div class="ev-title">家门口的决赛，0-1 输给希腊</div>
+          <div class="ev-desc">19 岁的他在揭幕战对希腊打进大赛首球，一路把球队带进决赛，然后在里斯本哭成了孩子。这是他和大力神杯之外，最长的一道影子。</div>
+          <span class="ev-tag">欧洲杯亚军</span>
+        </div>
+      </div>
+
+      <div class="ev rv" data-tone="gold">
+        <div class="ev-node"><i></i></div>
+        <div class="ev-card">
+          <div class="ev-date">2006.07</div>
+          <div class="ev-title">德国世界杯四强，队史最佳战绩</div>
+          <div class="ev-desc">对伊朗打进世界杯首球。半决赛负于法国，季军战负于德国——那是葡萄牙在他这一代最接近世界之巅的一次。</div>
+          <span class="ev-tag">世界杯第四</span>
+        </div>
+      </div>
+
+      <div class="ev rv" data-tone="gold">
+        <div class="ev-node"><i></i></div>
+        <div class="ev-card">
+          <div class="ev-date">2008</div>
+          <div class="ev-title">戴上队长袖标</div>
+          <div class="ev-desc">从这一年起，他不再只是那个会过人的边锋，而是一整个国家在球场上的代言人。</div>
+          <span class="ev-tag">CAPITÃO</span>
+        </div>
+      </div>
+
+      <div class="ev rv" data-tone="gold">
+        <div class="ev-node"><i></i></div>
+        <div class="ev-card">
+          <div class="ev-date">2016.06 — 07</div>
+          <div class="ev-title">法兰西之夏：三度落后，三度救主</div>
+          <div class="ev-desc">小组赛对匈牙利 3-3，三个进球全部由他参与。决赛第 25 分钟伤退，在场边看着埃德尔加时绝杀。葡萄牙第一次捧起大赛奖杯。</div>
+          <span class="ev-tag">欧洲杯冠军</span>
+        </div>
+      </div>
+
+      <div class="ev rv" data-tone="gold">
+        <div class="ev-node"><i></i></div>
+        <div class="ev-card">
+          <div class="ev-date">2018.06.15</div>
+          <div class="ev-title">3-3 西班牙，帽子戏法</div>
+          <div class="ev-desc">两次领先、两次被追平，第 88 分钟那记任意球绕过人墙钻进死角。一个人对一支球队，是世界杯史上最著名的个人表演之一。</div>
+          <span class="ev-tag">经典战役</span>
+        </div>
+      </div>
+
+      <div class="ev rv" data-tone="gold">
+        <div class="ev-node"><i></i></div>
+        <div class="ev-card">
+          <div class="ev-date">2019.06</div>
+          <div class="ev-title">首届欧国联冠军</div>
+          <div class="ev-desc">半决赛对瑞士帽子戏法，决赛 1-0 荷兰。葡萄牙成为这项赛事历史上第一个冠军。</div>
+          <span class="ev-tag">欧国联冠军</span>
+        </div>
+      </div>
+
+      <div class="ev rv" data-tone="gold">
+        <div class="ev-node"><i></i></div>
+        <div class="ev-card">
+          <div class="ev-date">2021.06</div>
+          <div class="ev-title">5 球金靴，登顶欧洲杯历史射手王</div>
+          <div class="ev-desc">对法国两球、对匈牙利两球、对德国一球。14 球，这个数字到 2026 年依然没人靠近。</div>
+          <span class="ev-tag">欧洲杯金靴</span>
+        </div>
+      </div>
+
+      <div class="ev rv" data-tone="sad">
+        <div class="ev-node"><i></i></div>
+        <div class="ev-card">
+          <div class="ev-date">2022.12.10</div>
+          <div class="ev-title">卡塔尔，八强，0-1 摩洛哥</div>
+          <div class="ev-desc">被放在替补席，替补登场也没能改变结局。他捂着通道走回更衣室，那一次哭得比 2004 年更沉默。</div>
+          <span class="ev-tag">世界杯八强</span>
+        </div>
+      </div>
+
+      <div class="ev rv" data-tone="gold">
+        <div class="ev-node"><i></i></div>
+        <div class="ev-card">
+          <div class="ev-date">2025.06.08</div>
+          <div class="ev-title">慕尼黑，2-2 西班牙，点球夺冠</div>
+          <div class="ev-desc">他在决赛里打进扳平球，葡萄牙点球取胜，第二次捧起欧国联，也成为赛事两度夺冠的第一支球队。</div>
+          <span class="ev-tag">欧国联冠军</span>
+        </div>
+      </div>
+
+      <div class="ev rv" data-tone="gold">
+        <div class="ev-node"><i></i></div>
+        <div class="ev-card">
+          <div class="ev-date">2026.06</div>
+          <div class="ev-title">41 岁，六届世界杯都进球</div>
+          <div class="ev-desc">小组赛对乌兹别克斯坦梅开二度，成为史上第一位连续六届世界杯破门的球员，同时以 41 岁 147 天刷新世界杯淘汰赛最年长进球纪录，并超越尤西比奥成为葡萄牙世界杯射手王。</div>
+          <span class="ev-tag">史无前例</span>
+        </div>
+      </div>
+
+      <div class="ev rv" data-tone="sad">
+        <div class="ev-node"><i></i></div>
+        <div class="ev-card">
+          <div class="ev-date">2026.07.06</div>
+          <div class="ev-title">达拉斯，16 强负于西班牙</div>
+          <div class="ev-desc">打满全场，触球 19 次。终场哨响他哭了，对着镜头说这会是最后一届世界杯。西班牙最终夺冠——他离那座奖杯，隔着一整个时代。</div>
+          <span class="ev-tag">世界杯 16 强</span>
+        </div>
+      </div>
+
+      <div class="ev rv" data-tone="sad">
+        <div class="ev-node"><i></i></div>
+        <div class="ev-card">
+          <div class="ev-date">2026.09.24</div>
+          <div class="ev-title">第 234 场，1-0 威尔士</div>
+          <div class="ev-desc">首发出场 67 分钟。当时没有人知道，这是最后一场。</div>
+          <span class="ev-tag">最后一战</span>
+        </div>
+      </div>
+
+      <div class="ev rv" data-tone="gold">
+        <div class="ev-node"><i></i></div>
+        <div class="ev-card">
+          <div class="ev-date">2026.11.05</div>
+          <div class="ev-title">交还 7 号球衣</div>
+          <div class="ev-desc">没有发布会，没有告别赛，没有最后一次谢场。只有一段五分钟的视频，和一句“葡萄牙永远在我心中”。</div>
+          <span class="ev-tag">FIM</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="wrap">
+    <div class="kicker rv">Three Moments</div>
+    <h2 class="rv d1">三个瞬间：起点、巅峰、终点</h2>
+    <p class="sub rv d2">如果 23 年只能留三帧，我会留这三帧。</p>
+
+    <div class="moments">
+
+      <article class="mo rv">
+        <div class="mo-info">
+          <div class="mo-year">2004</div>
+          <h3>19 岁，第一次让整个国家站起来</h3>
+          <p>欧洲杯揭幕战对希腊，第 93 分钟他头球砸进国家队大赛首球。虽然那场输了，虽然决赛又输给同一个对手，但从那一刻起，葡萄牙知道自己有一个可以在任何时候改变比分的人。</p>
+          <div class="mo-score">GREECE <b>2</b> — <b>1</b> PORTUGAL</div>
+        </div>
+        <div class="mo-art">
+          <svg class="pitch" viewBox="0 0 440 260" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="1" x2="1" y2="0">
+                <stop offset="0" stop-color="#C8102E"/><stop offset=".6" stop-color="#E36A4A"/><stop offset="1" stop-color="#E0B872"/>
+              </linearGradient>
+            </defs>
+            <rect x="10" y="10" width="420" height="240" stroke="rgba(245,239,227,.12)"/>
+            <path d="M330 10V250" stroke="rgba(245,239,227,.08)"/>
+            <rect x="330" y="70" width="100" height="120" stroke="rgba(245,239,227,.1)"/>
+            <g stroke="rgba(245,239,227,.6)" stroke-width="1.1">
+              <path d="M374 92V126"/><path d="M406 92V126"/><path d="M374 92H406"/>
+            </g>
+            <g stroke="rgba(245,239,227,.2)" stroke-width=".6">
+              <path d="M382 92V126M390 92V126M398 92V126"/>
+              <path d="M374 103H406M374 114H406"/>
+            </g>
+            <path class="arc" d="M118 196C186 226 268 130 374 108" stroke="url(#g1)" stroke-width="2.4" stroke-linecap="round"/>
+            <circle cx="118" cy="196" r="3.5" fill="rgba(245,239,227,.45)"/>
+            <circle class="netglow" cx="376" cy="108" r="26" fill="rgba(224,184,114,.28)"/>
+            <circle class="kickball" r="5.5" fill="#F5EFE3" style="offset-path:path('M118,196 C186,226 268,130 374,108')"/>
+            <text x="34" y="238" fill="rgba(245,239,227,.34)" font-size="9" letter-spacing="3" font-family="Helvetica">ESTADIO DO DRAGAO · 2004</text>
+          </svg>
+        </div>
+      </article>
+
+      <article class="mo rv">
+        <div class="mo-info">
+          <div class="mo-year">2018</div>
+          <h3>第 88 分钟，那记绕过人墙的任意球</h3>
+          <p>3-3 西班牙。他一个人打进三球，最后一球是距离球门 25 米的任意球，皮球从人墙右侧起飞，下坠，贴着立柱内侧进网。那届世界杯官方用一个词形容这场比赛：<em style="color:var(--gold);font-style:italic">Ronaldo</em>。</p>
+          <div class="mo-score">PORTUGAL <b>3</b> — <b>3</b> SPAIN</div>
+        </div>
+        <div class="mo-art">
+          <svg class="pitch" viewBox="0 0 440 260" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="g2" x1="0" y1="1" x2="1" y2="0">
+                <stop offset="0" stop-color="#F5EFE3"/><stop offset=".45" stop-color="#E0B872"/><stop offset="1" stop-color="#C8102E"/>
+              </linearGradient>
+            </defs>
+            <rect x="10" y="10" width="420" height="240" stroke="rgba(245,239,227,.12)"/>
+            <path d="M330 10V250" stroke="rgba(245,239,227,.08)"/>
+            <rect x="330" y="70" width="100" height="120" stroke="rgba(245,239,227,.1)"/>
+            <g stroke="rgba(245,239,227,.6)" stroke-width="1.1">
+              <path d="M372 74V114"/><path d="M404 74V114"/><path d="M372 74H404"/>
+            </g>
+            <g stroke="rgba(245,239,227,.2)" stroke-width=".6">
+              <path d="M380 74V114M388 74V114M396 74V114"/>
+              <path d="M372 87H404M372 100H404"/>
+            </g>
+            <g fill="rgba(245,239,227,.2)">
+              <rect x="234" y="150" width="11" height="28" rx="1"/>
+              <rect x="249" y="150" width="11" height="28" rx="1"/>
+              <rect x="264" y="150" width="11" height="28" rx="1"/>
+              <rect x="279" y="150" width="11" height="28" rx="1"/>
+            </g>
+            <path class="arc" d="M86 214C170 198 214 86 372 86" stroke="url(#g2)" stroke-width="2.4" stroke-linecap="round"/>
+            <circle cx="86" cy="214" r="3.5" fill="rgba(245,239,227,.45)"/>
+            <circle class="netglow" cx="374" cy="86" r="28" fill="rgba(200,16,46,.4)"/>
+            <circle class="kickball" r="5.5" fill="#F5EFE3" style="offset-path:path('M86,214 C170,198 214,86 372,86')"/>
+            <text x="34" y="238" fill="rgba(245,239,227,.34)" font-size="9" letter-spacing="3" font-family="Helvetica">SOCHI · 88' FREE KICK</text>
+          </svg>
+        </div>
+      </article>
+
+      <article class="mo rv">
+        <div class="mo-info">
+          <div class="mo-year">2026</div>
+          <h3>41 岁，最后一次把纪录往前推</h3>
+          <p>对乌兹别克斯坦梅开二度。六届世界杯，六届都进球，前无古人。两个月后他在达拉斯哭完，三个月后交还了球衣。他把纪录推到没人够得到的地方，然后转身走了。</p>
+          <div class="mo-score">GROUP STAGE · <b>2</b> GOALS · <b>41</b> Y/O</div>
+        </div>
+        <div class="mo-art">
+          <svg class="pitch" viewBox="0 0 440 260" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="g3" x1="1" y1="1" x2="0" y2="0">
+                <stop offset="0" stop-color="#6FBF95"/><stop offset=".55" stop-color="#E0B872"/>
+              </linearGradient>
+            </defs>
+            <rect x="10" y="10" width="420" height="240" stroke="rgba(245,239,227,.12)"/>
+            <path d="M110 10V250" stroke="rgba(245,239,227,.08)"/>
+            <rect x="10" y="70" width="100" height="120" stroke="rgba(245,239,227,.1)"/>
+            <g stroke="rgba(245,239,227,.6)" stroke-width="1.1">
+              <path d="M36 92V126"/><path d="M66 92V126"/><path d="M36 92H66"/>
+            </g>
+            <g stroke="rgba(245,239,227,.2)" stroke-width=".6">
+              <path d="M42 92V126M48 92V126M54 92V126M60 92V126"/>
+              <path d="M36 104H66M36 115H66"/>
+            </g>
+            <g font-family="Helvetica" text-anchor="middle" fill="rgba(245,239,227,.2)" font-size="40" font-weight="700">
+              <text x="250" y="52">2006</text><text x="336" y="52">·</text><text x="404" y="52">2026</text>
+            </g>
+            <path class="arc" d="M330 186C266 148 190 116 68 108" stroke="url(#g3)" stroke-width="2.4" stroke-linecap="round"/>
+            <circle cx="330" cy="186" r="3.5" fill="rgba(245,239,227,.45)"/>
+            <circle class="netglow" cx="66" cy="108" r="28" fill="rgba(111,191,149,.34)"/>
+            <circle class="kickball" r="5.5" fill="#F5EFE3" style="offset-path:path('M330,186 C266,148 190,116 68,108')"/>
+            <text x="34" y="238" fill="rgba(245,239,227,.34)" font-size="9" letter-spacing="3" font-family="Helvetica">SIX WORLD CUPS · SIX SCORED</text>
+          </svg>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="wrap">
+    <div class="kicker rv">Honours & Records</div>
+    <h2 class="rv d1">三座奖杯，和一堆<br>后来者要抬头看的东西</h2>
+
+    <div class="hon-grid rv d2">
+      <div class="hon">
+        <svg class="cup" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+          <path d="M7 3h10v6a5 5 0 0 1-10 0V3z"/><path d="M7 5H4v2a3 3 0 0 0 3 3M17 5h3v2a3 3 0 0 1-3 3"/><path d="M12 14v4M8 21h8"/>
+        </svg>
+        <div class="yr">2016</div>
+        <h4>欧洲杯冠军</h4>
+        <div class="note">葡萄牙历史上第一座国际大赛冠军。决赛第 25 分钟伤退，埃德尔加时绝杀法国。</div>
+      </div>
+      <div class="hon">
+        <svg class="cup" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+          <path d="M7 3h10v6a5 5 0 0 1-10 0V3z"/><path d="M7 5H4v2a3 3 0 0 0 3 3M17 5h3v2a3 3 0 0 1-3 3"/><path d="M12 14v4M8 21h8"/>
+        </svg>
+        <div class="yr">2019</div>
+        <h4>欧国联冠军</h4>
+        <div class="note">首届赛事冠军。半决赛对瑞士帽子戏法，决赛 1-0 荷兰。</div>
+      </div>
+      <div class="hon">
+        <svg class="cup" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+          <path d="M7 3h10v6a5 5 0 0 1-10 0V3z"/><path d="M7 5H4v2a3 3 0 0 0 3 3M17 5h3v2a3 3 0 0 1-3 3"/><path d="M12 14v4M8 21h8"/>
+        </svg>
+        <div class="yr">2025</div>
+        <h4>欧国联冠军</h4>
+        <div class="note">慕尼黑决赛 2-2 西班牙，点球取胜。他打进扳平球，成为两夺欧国联的第一队。</div>
+      </div>
+      <div class="hon second">
+        <div class="yr">2004</div>
+        <h4>欧洲杯亚军</h4>
+        <div class="note">19 岁，主场，决赛 0-1 输给希腊。所有故事的第一个伤口。</div>
+      </div>
+      <div class="hon second">
+        <div class="yr">2006</div>
+        <h4>世界杯第四</h4>
+        <div class="note">他这一代在世界杯上的最好成绩。半决赛负法国，季军战负德国。</div>
+      </div>
+      <div class="hon second">
+        <div class="yr">23</div>
+        <h4>年，没有大力神杯</h4>
+        <div class="note">六届世界杯，最好成绩四强。这是唯一缺的那一块，也是这段故事真正的重量。</div>
+      </div>
+    </div>
+
+    <div class="chart rv d3">
+      <div class="chart-title">146 球 · 分布</div>
+      <div class="bars" id="bars">
+        <div class="bar-row"><div class="bar-l">欧预赛</div><div class="bar-track"><div class="bar-fill" data-w="100"></div></div><div class="bar-v">39</div></div>
+        <div class="bar-row"><div class="bar-l">世预赛</div><div class="bar-track"><div class="bar-fill" data-w="95"></div></div><div class="bar-v">37</div></div>
+        <div class="bar-row"><div class="bar-l">友谊赛</div><div class="bar-track"><div class="bar-fill" data-w="56"></div></div><div class="bar-v">22</div></div>
+        <div class="bar-row"><div class="bar-l">欧国联</div><div class="bar-track"><div class="bar-fill" data-w="38"></div></div><div class="bar-v">15</div></div>
+        <div class="bar-row"><div class="bar-l">欧洲杯正赛</div><div class="bar-track"><div class="bar-fill" data-w="36"></div></div><div class="bar-v">14</div></div>
+        <div class="bar-row"><div class="bar-l">世界杯正赛</div><div class="bar-track"><div class="bar-fill" data-w="28"></div></div><div class="bar-v">11</div></div>
+        <div class="bar-row"><div class="bar-l">附加赛 / 联合会杯</div><div class="bar-track"><div class="bar-fill" data-w="21"></div></div><div class="bar-v">8</div></div>
+      </div>
+      <div class="chart-foot">超过一半的进球来自预选赛——纪录的底座不是高光，是日复一日的必须赢。</div>
+    </div>
+
+    <div class="tlabel rv">六届世界杯</div>
+    <div class="tgrid rv d1">
+      <div class="tcell"><div class="y">2006</div><div class="g">1<small>球</small></div><div class="r">德国 · 四强</div></div>
+      <div class="tcell"><div class="y">2010</div><div class="g">1<small>球</small></div><div class="r">南非 · 16 强</div></div>
+      <div class="tcell"><div class="y">2014</div><div class="g">1<small>球</small></div><div class="r">巴西 · 小组</div></div>
+      <div class="tcell"><div class="y">2018</div><div class="g">4<small>球</small></div><div class="r">俄罗斯 · 16 强</div></div>
+      <div class="tcell"><div class="y">2022</div><div class="g">1<small>球</small></div><div class="r">卡塔尔 · 八强</div></div>
+      <div class="tcell"><div class="y">2026</div><div class="g">3<small>球</small></div><div class="r">美加墨 · 16 强</div></div>
+    </div>
+
+    <div class="tlabel rv">六届欧洲杯</div>
+    <div class="tgrid rv d1">
+      <div class="tcell"><div class="y">2004</div><div class="g">2<small>球</small></div><div class="r">葡萄牙 · 亚军</div></div>
+      <div class="tcell"><div class="y">2008</div><div class="g">1<small>球</small></div><div class="r">奥瑞 · 八强</div></div>
+      <div class="tcell"><div class="y">2012</div><div class="g">3<small>球</small></div><div class="r">波乌 · 四强</div></div>
+      <div class="tcell champ"><div class="y">2016</div><div class="g">3<small>球</small></div><div class="r">法国 · 冠军</div></div>
+      <div class="tcell"><div class="y">2020</div><div class="g">5<small>球</small></div><div class="r">泛欧 · 16 强</div></div>
+      <div class="tcell"><div class="y">2024</div><div class="g">0<small>球</small></div><div class="r">德国 · 八强</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="wrap">
+    <div class="kicker rv">The Fans</div>
+    <h2 class="rv d1">他们说，7 号不是号码</h2>
+    <p class="sub rv d2">来自 Instagram、X、小红书的中文与葡语留言，整理成这一面滚动的墙。</p>
+  </div>
+  <div class="dm-stage" id="dmStage" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="dm-ctrl rv">
+      <button class="dm-btn act" data-mode="all">全部</button>
+      <button class="dm-btn" data-mode="cn">中文</button>
+      <button class="dm-btn" data-mode="pt">PT / EN</button>
+      <button class="dm-btn" id="dmPause">暂停</button>
+      <span class="dm-src">内容为球迷留言整理，非逐条原文引用</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="wrap" style="text-align:center">
+    <div class="kicker rv" style="justify-content:center">Adeus</div>
+    <div class="jersey-box rv d1">
+      <div class="jersey" id="jersey" role="button" tabindex="0" aria-label="点击翻转球衣">
+        <div class="face front">
+          <div class="shirt red">
+            <span class="collar"></span>
+            <svg class="seams" viewBox="0 0 100 112" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M37.5 1 L26 34 M62.5 1 L74 34" stroke="rgba(224,184,114,.38)" stroke-width="0.45" fill="none"/>
+              <path d="M25 96 L75 96" stroke="rgba(224,184,114,.14)" stroke-width="0.4" fill="none"/>
+            </svg>
+            <svg class="crest" viewBox="0 0 30 36" aria-hidden="true">
+              <path d="M15 2 L27 6 V18 C27 26 20 32 15 34 C10 32 3 26 3 18 V6 Z" fill="none" stroke="#E0B872" stroke-width="1.5"/>
+              <g fill="#E0B872">
+                <circle cx="15" cy="12" r="1.7"/><circle cx="10.5" cy="17" r="1.7"/>
+                <circle cx="19.5" cy="17" r="1.7"/><circle cx="12" cy="22.5" r="1.7"/>
+                <circle cx="18" cy="22.5" r="1.7"/>
+              </g>
+            </svg>
+            <div class="jnum">7</div>
+            <div class="jnm">RONALDO</div>
+            <div class="jhint">点击翻转</div>
+          </div>
+        </div>
+        <div class="face back">
+          <div class="shirt green">
+            <span class="collar"></span>
+            <svg class="seams" viewBox="0 0 100 112" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M37.5 1 L26 34 M62.5 1 L74 34" stroke="rgba(224,184,114,.32)" stroke-width="0.45" fill="none"/>
+            </svg>
+            <div class="jcapt">Capitão</div>
+            <div class="jnum sm">7</div>
+            <div class="jnm">PORTUGAL</div>
+            <div class="jnm sub2">2003 — 2026</div>
+            <div class="jhint">234 CAPS · 146 GOALS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2 class="end-title rv d2">Obrigado,<em>Capitão</em></h2>
+    <p class="end-sub rv d3">
+      23 年，234 场，146 球，三座奖杯，一座没有拿到的。<br>
+      球衣交出去了，标准留下了。
+    </p>
+    <div class="end-actions rv d4">
+      <button class="btn-primary" id="btnCard">生成我的纪念卡</button>
+      <button class="btn-ghost" id="btnTop">再看一次</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  OBRIGADO CAPITÃO · 2003—2026<br>
+  数据来源：新华社 / 中国新闻网 / 葡萄牙足协公开信息。页面为球迷纪念作品，非官方出品。
+</footer>
+
+<div id="toast"></div>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- progress + dots ---------- */
+  var prog = document.getElementById('prog');
+  var dots = Array.prototype.slice.call(document.querySelectorAll('#dots a'));
+  var secs = Array.prototype.slice.call(document.querySelectorAll('section'));
+
+  function onScroll(){
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    prog.style.width = (h > 0 ? (window.scrollY / h * 100) : 0) + '%';
+    var mid = window.scrollY + window.innerHeight * 0.4;
+    var cur = 0;
+    secs.forEach(function(s, i){ if (s.offsetTop <= mid) cur = i; });
+    dots.forEach(function(d, i){ d.classList.toggle('on', i === cur); });
+    tlProgress();
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+
+  /* ---------- reveal ---------- */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){
+        e.target.classList.add('in');
+        if (e.target.classList.contains('stat-wrap')) {}
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold:.14, rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv, .ev, .mo').forEach(function(el){ io.observe(el); });
+
+  /* ---------- counters ---------- */
+  function animateNum(el){
+    var to = parseFloat(el.dataset.to);
+    var dec = parseInt(el.dataset.dec || '0', 10);
+    var comma = el.dataset.comma === '1';
+    var dur = 1700, start = null;
+    if (reduce){ el.textContent = fmt(to); return; }
+    function fmt(v){
+      var s = dec ? v.toFixed(dec) : Math.round(v).toString();
+      if (comma) s = s.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      return s;
+    }
+    function step(t){
+      if (!start) start = t;
+      var p = Math.min((t - start) / dur, 1);
+      var e = 1 - Math.pow(1 - p, 3);
+      el.textContent = fmt(to * e);
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var ioNum = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){ animateNum(e.target); ioNum.unobserve(e.target); }
+    });
+  }, {threshold:.5});
+  document.querySelectorAll('.stat .n').forEach(function(el){ ioNum.observe(el); });
+
+  /* ---------- timeline progress ---------- */
+  var tl = document.getElementById('tl');
+  function tlProgress(){
+    if (!tl) return;
+    var r = tl.getBoundingClientRect();
+    var p = (window.innerHeight * 0.55 - r.top) / r.height;
+    p = Math.max(0, Math.min(1, p));
+    tl.style.setProperty('--tlp', (p * 100).toFixed(2) + '%');
+  }
+
+  /* ---------- bars ---------- */
+  var bars = document.getElementById('bars');
+  if (bars){
+    var ioBar = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if (e.isIntersecting){
+          bars.querySelectorAll('.bar-fill').forEach(function(b, i){
+            setTimeout(function(){ b.style.width = b.dataset.w + '%'; }, i * 90);
+          });
+          ioBar.disconnect();
+        }
+      });
+    }, {threshold:.3});
+    ioBar.observe(bars);
+  }
+
+  /* ---------- jersey flip ---------- */
+  var j = document.getElementById('jersey');
+  function flip(){ j.classList.toggle('flip'); }
+  j.addEventListener('click', flip);
+  j.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); } });
+
+  /* ---------- toast ---------- */
+  var toast = document.getElementById('toast'), tt;
+  function say(msg){
+    toast.textContent = msg; toast.classList.add('on');
+    clearTimeout(tt); tt = setTimeout(function(){ toast.classList.remove('on'); }, 2600);
+  }
+
+  /* ---------- danmaku ---------- */
+  var COMMENTS = [
+    {t:'我第一次看球就是你，现在我儿子也认识你了。',m:'cn'},
+    {t:'Obrigado, Capitão.',m:'pt',hot:1},
+    {t:'2018 那脚任意球，我在宿舍喊到被宿管敲门。',m:'cn',hot:1},
+    {t:'You made us believe.',m:'en'},
+    {t:'谢谢你让葡萄牙变成一支会被害怕的球队。',m:'cn'},
+    {t:'别哭啊队长，你已经给了我们太多。',m:'cn'},
+    {t:'我 2004 年看着你哭，2026 年还是没忍住。',m:'cn',hot:1},
+    {t:'7 号不是号码，是一个人。',m:'cn',hot:1},
+    {t:'Não é só futebol. É Portugal.',m:'pt'},
+    {t:'别人踢球是为了赢，你踢球是为了不认输。',m:'cn'},
+    {t:'从菲戈身后的小弟，到整支球队的脊梁。',m:'cn'},
+    {t:'The greatest of all time. No debate.',m:'en'},
+    {t:'我今年 41，你今年 41，我们一起老了。',m:'cn'},
+    {t:'客观说你不是神，但你是我青春里最像神的人。',m:'cn'},
+    {t:'2003 到 2026，我的整个学生时代。',m:'cn'},
+    {t:'23 anos. Uma vida.',m:'pt'},
+    {t:'谢谢你扛着这支队伍走了 23 年。',m:'cn'},
+    {t:'那年欧洲杯决赛你伤退，我哭了一晚上。',m:'cn'},
+    {t:'Você nos deu o impossível.',m:'pt'},
+    {t:'不管别人怎么说，你永远是我们的队长。',m:'cn',hot:1},
+    {t:'足球会记得你，葡萄牙更会。',m:'cn'},
+    {t:'你的自律是我人生里最具体的榜样。',m:'cn'},
+    {t:'每次落后我都觉得还有机会，因为你还在场上。',m:'cn'},
+    {t:'Six World Cups. Six tournaments scored in.',m:'en'},
+    {t:'我不懂球，但我知道你哭的时候我也难过。',m:'cn'},
+    {t:'小时候墙上贴的是你，现在孩子墙上也是你。',m:'cn'},
+    {t:'队长，好好休息，剩下的交给他们。',m:'cn'},
+    {t:'Adeus, senhor 7.',m:'pt'},
+    {t:'你不是完美的人，但你是我完整的青春。',m:'cn',hot:1},
+    {t:'谢谢你让我知道，天赋加上偏执可以有多可怕。',m:'cn'},
+    {t:'From Madeira to the world.',m:'en'},
+    {t:'家里那件 7 号球衣我不会洗。',m:'cn'},
+    {t:'23 年，8400 多天，我们都在。',m:'cn'},
+    {t:'你交出去的是球衣，留下的是一整套标准。',m:'cn',hot:1},
+    {t:'再看到那个背影跑起来的时候，我还是会站起来。',m:'cn'},
+    {t:'你没有大力神杯，但你有一整个国家的敬意。',m:'cn',hot:1},
+    {t:'那个任意球弧线，我到现在都画不出来。',m:'cn'},
+    {t:'我第一次熬夜看球是 2006 年，那晚你进了伊朗那个球。',m:'cn'},
+    {t:'说再见太难了，队长。',m:'cn'},
+    {t:'O país inteiro cresceu a ver-te jogar.',m:'pt'}
+  ];
+
+  var stage = document.getElementById('dmStage');
+  var laneCount = 8, lanes = [], mode = 'all', pool = [], paused = false, timer = null;
+
+  function buildLanes(){
+    stage.innerHTML = '';
+    lanes = [];
+    var h = stage.clientHeight;
+    laneCount = h > 420 ? 9 : (h > 320 ? 8 : 6);
+    var step = h / laneCount;
+    for (var i = 0; i < laneCount; i++){
+      var l = document.createElement('div');
+      l.className = 'dm-lane';
+      l.style.top = (i * step + step / 2 - 17) + 'px';
+      stage.appendChild(l);
+      lanes.push(l);
+    }
+  }
+
+  function refill(){
+    pool = COMMENTS.filter(function(c){ return mode === 'all' || c.m === mode; });
+    pool = pool.sort(function(){ return Math.random() - .5; });
+  }
+
+  var SPEED = window.innerWidth < 700 ? 92 : 112; // px / 秒，全部同速 => 同轨永不追尾
+
+  function laneReady(lane){
+    var last = lane.lastElementChild;
+    if (!last) return true;
+    var sr = stage.getBoundingClientRect();
+    var r = last.getBoundingClientRect();
+    return (r.right - sr.left) < (sr.width - 96);
+  }
+
+  var recent = [];
+
+  function spawn(prefill, target, phase){
+    if (!pool.length) refill();
+    var c = pool.pop(), tries = 0;
+    while (c && recent.indexOf(c.t) >= 0 && tries < 14){
+      pool.unshift(c);
+      c = pool.pop();
+      tries++;
+    }
+    if (!c) return;
+    recent.push(c.t);
+    if (recent.length > 14) recent.shift();
+    var lane = target;
+    if (!lane){
+      var free = [];
+      for (var i = 0; i < lanes.length; i++){ if (laneReady(lanes[i])) free.push(lanes[i]); }
+      if (!free.length) return;
+      lane = free[Math.floor(Math.random() * free.length)];
+    }
+    var el = document.createElement('div');
+    el.className = 'dm ' + (c.m === 'pt' ? 'pt' : c.m === 'en' ? 'en' : '') + (c.hot ? ' hot' : '');
+    el.textContent = c.t;
+    el.style.top = (Math.random() * 10 - 5).toFixed(1) + 'px';
+    el.style.opacity = (0.72 + Math.random() * 0.28).toFixed(2);
+    lane.appendChild(el);
+    var w = el.offsetWidth;
+    var dur = (stage.clientWidth + w) / SPEED;
+    var delay = prefill ? -(dur * (phase === 2 ? (0.04 + Math.random() * 0.12) : (0.58 + Math.random() * 0.32))) : 0;
+    el.addEventListener('animationend', function(){ el.remove(); });
+    el.style.animation = 'slide ' + dur.toFixed(2) + 's linear ' + delay.toFixed(2) + 's forwards';
+    if (paused){
+      el.style.animationPlayState = 'paused';
+      if (delay) el.style.animationDelay = '0s';
+    }
+    return el;
+  }
+
+  function prefill(phase){
+    for (var i = 0; i < lanes.length; i++){
+      if (Math.random() < 0.9) spawn(true, lanes[i], phase);
+    }
+  }
+
+  function loop(){
+    spawn(false);
+    timer = setTimeout(loop, 360 + Math.random() * 460);
+  }
+
+  function startDM(){
+    clearTimeout(timer);
+    buildLanes(); refill();
+    prefill(1);
+    if (window.innerWidth >= 700) prefill(2);
+    loop();
+  }
+
+  if (stage){
+    startDM();
+    var rt;
+    window.addEventListener('resize', function(){
+      clearTimeout(rt);
+      rt = setTimeout(function(){ startDM(); }, 320);
+    });
+
+    document.querySelectorAll('.dm-btn[data-mode]').forEach(function(b){
+      b.addEventListener('click', function(){
+        document.querySelectorAll('.dm-btn[data-mode]').forEach(function(x){ x.classList.remove('act'); });
+        b.classList.add('act');
+        mode = b.dataset.mode;
+        refill();
+        Array.prototype.forEach.call(stage.querySelectorAll('.dm'), function(n){ n.remove(); });
+      });
+    });
+
+    var pb = document.getElementById('dmPause');
+    pb.addEventListener('click', function(){
+      paused = !paused;
+      pb.textContent = paused ? '继续' : '暂停';
+      Array.prototype.forEach.call(stage.querySelectorAll('.dm'), function(n){
+        n.style.animationPlayState = paused ? 'paused' : 'running';
+      });
+    });
+  }
+
+  /* ---------- share card ---------- */
+  var MOMENTS = [
+    {y:'2004', t:'19 岁的眼泪', s:'GRE 1-0 POR · 欧洲杯决赛'},
+    {y:'2016', t:'法兰西之夏', s:'POR 1-0 FRA · 欧洲杯冠军'},
+    {y:'2018', t:'那记任意球', s:'POR 3-3 ESP · 帽子戏法'},
+    {y:'2025', t:'慕尼黑的点球', s:'POR (p) 2-2 ESP · 欧国联'},
+    {y:'2026', t:'六届世界杯都进球', s:'GROUP STAGE · 41 岁梅开二度'},
+    {y:'2026', t:'交还 7 号球衣', s:'234 CAPS · 146 GOALS'}
+  ];
+
+  function drawCard(){
+    var W = 1080, H = 1440;
+    var cv = document.createElement('canvas');
+    cv.width = W; cv.height = H;
+    var g = cv.getContext('2d');
+
+    // bg
+    var bg = g.createRadialGradient(W/2, H*0.32, 60, W/2, H*0.42, H*0.85);
+    bg.addColorStop(0, '#8E0A1E');
+    bg.addColorStop(0.5, '#3E030C');
+    bg.addColorStop(1, '#0A0706');
+    g.fillStyle = bg; g.fillRect(0, 0, W, H);
+
+    // giant 7
+    g.save();
+    g.globalAlpha = 0.1;
+    g.fillStyle = '#F5EFE3';
+    g.font = '700 780px "DIN Alternate", Helvetica, Arial';
+    g.textAlign = 'center';
+    g.fillText('7', W/2, H*0.62);
+    g.restore();
+
+    // frame
+    g.strokeStyle = 'rgba(224,184,114,.28)';
+    g.lineWidth = 2;
+    g.strokeRect(48, 48, W-96, H-96);
+    g.strokeStyle = 'rgba(224,184,114,.12)';
+    g.strokeRect(62, 62, W-124, H-124);
+
+    g.textAlign = 'center';
+    // top small
+    g.fillStyle = 'rgba(245,239,227,.55)';
+    g.font = '400 24px Helvetica, Arial';
+    g.letterSpacing = '8px';
+    g.fillText('P O R T U G A L   2 0 0 3 — 2 0 2 6', W/2, 150);
+
+    // CR7
+    g.fillStyle = '#E0B872';
+    g.font = '700 34px "DIN Alternate", Helvetica, Arial';
+    g.letterSpacing = '14px';
+    g.fillText('CRISTIANO RONALDO', W/2, 216);
+
+    // title
+    g.letterSpacing = '0px';
+    g.fillStyle = '#F5EFE3';
+    g.font = '600 116px "Songti SC", Georgia, serif';
+    g.fillText('Obrigado,', W/2, 372);
+
+    g.fillStyle = '#E0B872';
+    g.font = 'italic 600 128px "Songti SC", Georgia, serif';
+    g.fillText('Capitão', W/2, 500);
+
+    // divider
+    g.strokeStyle = 'rgba(224,184,114,.45)';
+    g.lineWidth = 1;
+    g.beginPath(); g.moveTo(W/2 - 90, 566); g.lineTo(W/2 + 90, 566); g.stroke();
+
+    // numbers row
+    var nums = [['234','出场'],['146','进球'],['45','助攻'],['23','年']];
+    var cw = W / 4;
+    nums.forEach(function(n, i){
+      var x = cw * i + cw/2;
+      g.fillStyle = '#F5EFE3';
+      g.font = '700 62px "DIN Alternate", Helvetica, Arial';
+      g.letterSpacing = '0px';
+      g.fillText(n[0], x, 672);
+      g.fillStyle = 'rgba(245,239,227,.5)';
+      g.font = '400 22px Helvetica, Arial';
+      g.fillText(n[1], x, 706);
+    });
+
+    // moment box
+    var m = MOMENTS[Math.floor(Math.random() * MOMENTS.length)];
+    g.fillStyle = 'rgba(10,7,6,.5)';
+    g.fillRect(120, 790, W-240, 240);
+    g.strokeStyle = 'rgba(224,184,114,.22)';
+    g.strokeRect(120, 790, W-240, 240);
+
+    g.fillStyle = 'rgba(224,184,114,.8)';
+    g.font = '400 22px Helvetica, Arial';
+    g.letterSpacing = '6px';
+    g.fillText('M E U   M O M E N T O', W/2, 850);
+
+    g.fillStyle = '#E0B872';
+    g.font = '700 54px "DIN Alternate", Helvetica, Arial';
+    g.letterSpacing = '2px';
+    g.fillText(m.y, W/2, 916);
+
+    g.fillStyle = '#F5EFE3';
+    g.font = '600 44px "Songti SC", Georgia, serif';
+    g.letterSpacing = '0px';
+    g.fillText(m.t, W/2, 976);
+
+    g.fillStyle = 'rgba(245,239,227,.55)';
+    g.font = '400 22px "DIN Alternate", Helvetica, Arial';
+    g.fillText(m.s, W/2, 1012);
+
+    // quote
+    g.fillStyle = 'rgba(245,239,227,.68)';
+    g.font = '400 26px "Songti SC", Georgia, serif';
+    g.fillText('“进球会褪色，奖杯会进博物馆，纪录终会被打破。”', W/2, 1140);
+    g.fillText('“但我们在人们心里的位置，时间抹不掉。”', W/2, 1182);
+
+    // footer
+    g.fillStyle = 'rgba(245,239,227,.32)';
+    g.font = '400 20px Helvetica, Arial';
+    g.letterSpacing = '3px';
+    g.fillText('O B R I G A D O ,   C A P I T A O', W/2, 1290);
+    g.fillStyle = 'rgba(245,239,227,.22)';
+    g.font = '400 19px Helvetica, Arial';
+    g.fillText('2 0 2 6 . 1 1 . 0 5', W/2, 1330);
+
+    return cv;
+  }
+
+  document.getElementById('btnCard').addEventListener('click', function(){
+    var cv = drawCard();
+    cv.toBlob(function(blob){
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = 'obrigado-capitao.png';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(function(){ URL.revokeObjectURL(url); }, 4000);
+      say('纪念卡已保存到下载');
+    }, 'image/png');
+  });
+
+  document.getElementById('btnTop').addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* init */
+  onScroll();
+  window.addEventListener('load', onScroll);
+})();
+</script>
+</body>
+</html>
