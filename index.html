@@ -110,16 +110,22 @@ h2{
 }
 .hero-figure{position:absolute;inset:0;z-index:0;overflow:hidden}
 .hero-figure img{
-  width:100%;height:100%;object-fit:cover;object-position:50% 50%;opacity:.74;
+  width:100%;height:100%;object-fit:cover;object-position:50% 50%;opacity:.92;
+  filter:contrast(1.05) saturate(.95) brightness(1.14);
   transform:scale(1.02);animation:heroIn 2.4s ease-out both;
 }
+.hero-figure::before{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(110,11,20,.24),rgba(58,6,14,.3) 58%,rgba(20,5,8,.55));
+  mix-blend-mode:multiply;
+}
 .hero-figure::after{
-  content:"";position:absolute;inset:0;
+  content:"";position:absolute;inset:0;z-index:2;
   background:
     radial-gradient(56% 42% at 50% 34%,rgba(10,7,6,.5),rgba(10,7,6,.06) 64%,transparent 84%),
     linear-gradient(180deg,rgba(10,7,6,.92) 0%,rgba(10,7,6,.2) 20%,rgba(10,7,6,.16) 54%,rgba(10,7,6,.86) 88%,#0A0706 100%);
 }
-@keyframes heroIn{from{opacity:.2;transform:scale(1.09)}to{opacity:.74;transform:scale(1.02)}}
+@keyframes heroIn{from{opacity:.2;transform:scale(1.09)}to{opacity:.92;transform:scale(1.02)}}
 .hero-seven{z-index:1}
 .hero-inner{position:relative;z-index:2;max-width:900px}
 .hero-top{
@@ -144,13 +150,15 @@ h2{
 }
 .hero-meta{
   display:flex;gap:clamp(18px,4vw,54px);justify-content:center;flex-wrap:wrap;
+  text-shadow:0 2px 16px rgba(8,4,4,.9),0 1px 4px rgba(8,4,4,.8);
   font-family:var(--num);font-size:clamp(11px,1.5vw,13px);letter-spacing:.18em;
   color:rgba(245,239,227,.7);
 }
 .hero-meta b{color:var(--cream);font-weight:400}
 .hero-quote{
   margin-top:clamp(20px,3.2vh,38px);font-family:var(--serif);
-  font-size:clamp(13px,1.7vw,17px);color:rgba(245,239,227,.72);
+  font-size:clamp(13px,1.7vw,17px);color:rgba(245,239,227,.86);
+  text-shadow:0 2px 16px rgba(8,4,4,.9),0 1px 4px rgba(8,4,4,.75);
   line-height:2;max-width:min(30em,92vw);margin-left:auto;margin-right:auto;
 }
 .hero-quote p{max-width:100%}
@@ -246,8 +254,10 @@ h2{
   #s0::before{background:radial-gradient(60% 70% at 22% 46%,rgba(200,16,46,.3),transparent 72%)}
   .hero-seven{display:none}
   .hero-inner{max-width:min(56vw,680px)}
-  .hero-figure{left:auto;right:0;width:56%}
-  .hero-figure img{object-position:50% 46%;opacity:.86}
+  .hero-figure{left:auto;right:0;width:66%;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 24%);
+    mask-image:linear-gradient(90deg,transparent 0,#000 24%)}
+  .hero-figure img{object-position:56% 46%;opacity:.95}
   .hero-figure::after{
     background:
       linear-gradient(90deg,#0A0706 0%,rgba(10,7,6,.92) 14%,rgba(10,7,6,.42) 46%,rgba(10,7,6,.06) 72%,rgba(10,7,6,.5) 100%),
@@ -260,8 +270,8 @@ h2{
   .scroll-hint{left:clamp(48px,7vw,132px);transform:none}
 }
 @media(max-width:760px){
-  .hero-figure img{opacity:.52;object-position:50% 38%}
-  .mo-banner img{height:clamp(150px,42vw,220px)}
+  #s0{padding-bottom:230px}
+  .hero-figure img{opacity:.95;object-position:50% 32%;filter:contrast(1.05) saturate(.95) brightness(1.1)}
   .jersey-photo{width:min(74vw,300px)}
   .ev{grid-template-columns:26px 1fr;gap:0}
   .tl::before,.tl::after{left:4px}
@@ -301,11 +311,6 @@ h2{
   padding-bottom:3px;transition:.25s;
 }
 .mo-link:hover{color:var(--gold);border-color:var(--gold);letter-spacing:.2em}
-.mo-banner{margin:clamp(26px,4.4vh,44px) 0 0;position:relative;overflow:hidden;
-  border:1px solid rgba(245,239,227,.09)}
-.mo-banner img{display:block;width:100%;height:clamp(190px,32vw,400px);object-fit:cover;object-position:50% 44%;opacity:.9}
-.mo-banner::after{content:"";position:absolute;inset:0;pointer-events:none;
-  background:linear-gradient(180deg,rgba(10,7,6,.55),transparent 30%,transparent 64%,rgba(10,7,6,.72))}
 .jersey-photo{margin:clamp(22px,3.6vh,38px) auto 0;width:clamp(240px,30vw,368px);position:relative}
 .jersey-photo img{display:block;width:100%;height:auto;border:1px solid rgba(245,239,227,.1);
   box-shadow:0 30px 70px rgba(0,0,0,.6)}
@@ -763,9 +768,6 @@ footer a{color:rgba(224,184,114,.6);text-decoration:none}
     <h2 class="rv d1">三个瞬间：<br>起点、巅峰、终点</h2>
     <p class="sub rv d2">一个 19 岁，一个 33 岁，一个 41 岁。同一件球衣。</p>
 
-    <figure class="mo-banner rv d3">
-      <img src="./img/moment.jpg" alt="任意球越过人墙的插画" loading="lazy">
-    </figure>
 
     <div class="moments">
 
@@ -775,7 +777,7 @@ footer a{color:rgba(224,184,114,.6);text-decoration:none}
           <h3>19 岁，第一次让整个国家站起来</h3>
           <p>欧洲杯揭幕战对希腊，第 93 分钟他头球砸进国家队大赛首球。虽然那场输了，虽然决赛又输给同一个对手，但从那一刻起，葡萄牙知道自己有一个可以在任何时候改变比分的人。</p>
           <div class="mo-score">GREECE <b>2</b> — <b>1</b> PORTUGAL</div>
-          <a class="mo-link" href="https://www.youtube.com/results?search_query=Ronaldo+Greece+Euro+2004+final+highlights" target="_blank" rel="noopener">观看现场视频 ↗</a>
+          <a class="mo-link" href="https://search.bilibili.com/all?keyword=C%E7%BD%97%202004%20%E6%AC%A7%E6%B4%B2%E6%9D%AF%20%E5%B8%8C%E8%85%8A%20%E5%86%B3%E8%B5%9B" target="_blank" rel="noopener">去 B 站看现场 ↗</a>
         </div>
         <div class="mo-art">
           <svg class="pitch" viewBox="0 0 440 260" fill="none" aria-hidden="true">
@@ -809,7 +811,7 @@ footer a{color:rgba(224,184,114,.6);text-decoration:none}
           <h3>第 88 分钟，那记绕过人墙的任意球</h3>
           <p>3-3 西班牙。他一个人打进三球，最后一球是距离球门 25 米的任意球，皮球从人墙右侧起飞，下坠，贴着立柱内侧进网。那届世界杯官方用一个词形容这场比赛：<em style="color:var(--gold);font-style:italic">Ronaldo</em>。</p>
           <div class="mo-score">PORTUGAL <b>3</b> — <b>3</b> SPAIN</div>
-          <a class="mo-link" href="https://www.youtube.com/results?search_query=Ronaldo+free+kick+Spain+2018+World+Cup+highlights" target="_blank" rel="noopener">观看现场视频 ↗</a>
+          <a class="mo-link" href="https://search.bilibili.com/all?keyword=C%E7%BD%97%202018%20%E4%B8%96%E7%95%8C%E6%9D%AF%20%E8%A5%BF%E7%8F%AD%E7%89%99%20%E4%BB%BB%E6%84%8F%E7%90%83" target="_blank" rel="noopener">去 B 站看现场 ↗</a>
         </div>
         <div class="mo-art">
           <svg class="pitch" viewBox="0 0 440 260" fill="none" aria-hidden="true">
@@ -847,9 +849,9 @@ footer a{color:rgba(224,184,114,.6);text-decoration:none}
         <div class="mo-info">
           <div class="mo-year">2026</div>
           <h3>41 岁，最后一次把纪录往前推</h3>
-          <p>对乌兹别克斯坦梅开二度。六届世界杯，六届都进球，前无古人。两个月后他在达拉斯哭完，三个月后交还了球衣。他把纪录推到没人够得到的地方，然后转身走了。</p>
+          <p>对乌兹别克斯坦梅开二度。六届世界杯，六届都进球，前无古人。两个月后他在达拉斯哭完，三个月后交还了球衣。</p>
           <div class="mo-score">GROUP STAGE · <b>2</b> GOALS · <b>41</b> Y/O</div>
-          <a class="mo-link" href="https://www.youtube.com/results?search_query=Portugal+Uzbekistan+2026+World+Cup+Ronaldo+highlights" target="_blank" rel="noopener">观看现场视频 ↗</a>
+          <a class="mo-link" href="https://search.bilibili.com/all?keyword=C%E7%BD%97%202026%20%E4%B8%96%E7%95%8C%E6%9D%AF%20%E4%B9%8C%E5%85%B9%E5%88%AB%E5%85%8B%E6%96%AF%E5%9D%A6" target="_blank" rel="noopener">去 B 站看现场 ↗</a>
         </div>
         <div class="mo-art">
           <svg class="pitch" viewBox="0 0 440 260" fill="none" aria-hidden="true">
@@ -988,8 +990,7 @@ footer a{color:rgba(224,184,114,.6);text-decoration:none}
   <div class="wrap" style="text-align:center">
     <div class="kicker rv" style="justify-content:center">Adeus</div>
     <figure class="jersey-photo rv d1">
-      <img src="./img/jersey.jpg" alt="挂在衣架上的 7 号红色球衣，下方放着金色队长袖标">
-      <figcaption>7 号 · 2003 — 2026</figcaption>
+      <img src="./img/jersey.jpg" alt="平铺的红色 7 号球衣，旁边摆着其他几件球衣">
     </figure>
     <h2 class="end-title rv d2">Obrigado,<em>Capitão</em></h2>
     <p class="end-sub rv d3">
